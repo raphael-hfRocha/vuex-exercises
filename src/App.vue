@@ -1,28 +1,61 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div id="app">
+		<h1>Painel de controle</h1>
+		<div class="linha">
+			<Parametros></Parametros>
+			<Loja></Loja>
+		</div>
+		<div class="linha">
+			<Carrinho></Carrinho>
+			<Resumo></Resumo>
+		</div>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Parametros from './components/Parametros'
+import Loja from './components/Loja'
+import Carrinho from './components/Carrinho'
+import Resumo from './components/Resumo'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	name: 'app',
+	components: { Parametros, Loja, Carrinho, Resumo }
 }
 </script>
 
 <style>
+* {
+	font-family: 'Oswald', sans-serif;
+}
+
+body {
+	font-size: 2rem;
+	background: linear-gradient(to right, rgb(0, 0, 0), rgb(67, 67, 67));
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #FFF;
+}
+
+h1 {
+	font-weight: 200;
+}
+
+.linha {
+	display: flex;
+}
+
+button {
+	font-size: 1.8rem;
+	padding: 5px 15px;
+	border-radius: 5px;
+	color: #222;
+	background-color: #FAFAFA;
+	outline: none;
+	border: none;
 }
 </style>
