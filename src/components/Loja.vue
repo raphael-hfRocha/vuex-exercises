@@ -21,10 +21,10 @@ export default {
     },
     computed: {
         quantidade() {
-            return this.$store.state.quantidade
+            return this.$store.state.parametros.quantidade
         },
         preco() {
-            return this.$store.state.preco
+            return this.$store.state.parametros.preco
         }
     },
     methods: {
@@ -41,8 +41,7 @@ export default {
             // this.$store.state.produtos.push(produto);
             // this.$store.commit('adicionarProduto', produto)
 
-            this.$store.dispatch('adicionarProduto', produto);
-
+            this.adicionarProduto(produto);
         }
     }
 }
